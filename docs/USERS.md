@@ -156,9 +156,43 @@ None.
 
 - 200 - OK
 
-#### Response Body
+#### Response Body Example
 
-**@TODO**
+```json
+{
+  "guacadmin": {
+    "username": "guacadmin",
+    "attributes": {
+      "guac-email-address": null,
+      "guac-organizational-role": null,
+      "guac-full-name": null,
+      "expired": null,
+      "timezone": null,
+      "access-window-start": null,
+      "guac-organization": null,
+      "access-window-end": null,
+      "disabled": null,
+      "valid-until": null,
+      "valid-from": null
+    },
+  "someuser": {
+    "username": "someuser",
+    "attributes": {
+      "guac-email-address": "some.user@company.local",
+      "guac-organizational-role": "user",
+      "guac-full-name": "Some User",
+      "expired": null,
+      "timezone": null,
+      "access-window-start": null,
+      "guac-organization": null,
+      "access-window-end": null,
+      "disabled": null,
+      "valid-until": null,
+      "valid-from": null
+    }
+  }
+}
+```
 
 ---
 
@@ -192,9 +226,26 @@ None.
 
 - 200 - OK
 
-#### Response Body
+#### Response Body Example
 
-**@TODO**
+```json
+{
+  "username": "someuser",
+  "attributes": {
+    "guac-email-address": "some.user@company.local",
+    "guac-organizational-role": "user",
+    "guac-full-name": "Some User",
+    "expired": null,
+    "timezone": null,
+    "access-window-start": null,
+    "guac-organization": null,
+    "access-window-end": null,
+    "disabled": null,
+    "valid-until": null,
+    "valid-from": null
+  }
+}
+```
 
 ---
 
@@ -227,9 +278,20 @@ None.
 
 - 200 - OK
 
-#### Response Body
+#### Response Body Example
 
-**@TODO**
+```json
+{
+  "username": "guacadmin",
+  "attributes": {
+    "guac-email-address": null,
+    "guac-organizational-role": null,
+    "guac-full-name": null,
+    "guac-organization": null
+  },
+  "lastActive": 1678440189434
+}
+```
 
 ---
 
@@ -263,9 +325,23 @@ None.
 
 - 200 - OK
 
-#### Response Body
+#### Response Body Example
 
-**@TODO**
+```json
+{
+  "connectionPermissions": {},
+  "connectionGroupPermissions": {},
+  "sharingProfilePermissions": {},
+  "activeConnectionPermissions": {},
+  "userPermissions": {
+    "someuser": [
+      "READ"
+    ]
+  },
+  "userGroupPermissions": {},
+  "systemPermissions": []
+}
+```
 
 ---
 
@@ -299,9 +375,42 @@ None.
 
 - 200 - OK
 
-#### Response Body
+#### Response Body Example
 
-**@TODO**
+```json
+{
+  "connectionPermissions": {
+    "3": [
+      "READ"
+    ],
+    "5": [
+      "READ"
+    ]
+  },
+  "connectionGroupPermissions": {
+    "2": [
+      "READ"
+    ]
+  },
+  "sharingProfilePermissions": {},
+  "activeConnectionPermissions": {},
+  "userPermissions": {
+    "admin": [
+      "READ",
+      "UPDATE"
+    ]
+  },
+  "userGroupPermissions": {},
+  "systemPermissions": [
+    "CREATE_USER",
+    "CREATE_USER_GROUP",
+    "CREATE_CONNECTION",
+    "CREATE_CONNECTION_GROUP",
+    "CREATE_SHARING_PROFILE",
+    "ADMINISTER"
+  ]
+}
+```
 
 ---
 
